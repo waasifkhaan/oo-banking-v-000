@@ -16,16 +16,16 @@ class Transfer
       while counter < 1
         if valid? 
         #binding.pry
-          counter += 1
+          
           @sender.balance -= amount 
           @receiver.balance += amount
             self.status = "complete"
           
         else
-          counter += 1
           self.status = "rejected"
             "Transaction rejected. Please check your account balance."
         end
+        counter =+ 1
       end 
   end 
 end
