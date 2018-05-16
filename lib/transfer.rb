@@ -10,7 +10,7 @@ class Transfer
   
   def valid?
     binding.pry
-    @sender.bank_account.valid? && @receiver.bank_account.status.valid?
+    @sender.valid? && @receiver.valid?
     
   end 
   
