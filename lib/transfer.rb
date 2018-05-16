@@ -13,7 +13,7 @@ class Transfer
   end 
   def execute_transaction
     counter = 0
-      if counter == 0
+      counter == 0
         if valid? 
         #binding.pry
         counter += 1
