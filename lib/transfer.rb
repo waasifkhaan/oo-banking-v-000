@@ -6,6 +6,7 @@ class Transfer
     @amount = amount 
     @status = "pending"
   end 
+  
   def valid?
     @sender.bank_account.valid? && @receiver.bank_account.status.valid?
     
