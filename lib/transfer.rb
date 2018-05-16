@@ -12,7 +12,7 @@ class Transfer
     @sender.valid? && @receiver.valid?
   end 
   def execute_transaction
-      if valid? && @status != "complete" 
+      if valid? && @status == "pending" 
         #binding.pry
           counter += 1
           @sender.balance -= amount 
