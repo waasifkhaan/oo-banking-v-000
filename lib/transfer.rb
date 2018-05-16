@@ -25,7 +25,7 @@ class Transfer
           self.status = "rejected"
             "Transaction rejected. Please check your account balance."
         end
-        counter =+ 1
+        counter += 1
       end 
   end 
 end
