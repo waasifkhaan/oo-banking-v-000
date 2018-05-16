@@ -7,7 +7,8 @@ class Transfer
     @status = "pending"
   end 
   def valid?
-    if @sender.bank_account.status.valid?
+    @sender.bank_account.status.valid? && @receiver.bank_account.status.valid?
+    
   end 
   
 end
