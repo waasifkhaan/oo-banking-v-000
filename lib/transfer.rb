@@ -12,7 +12,7 @@ class Transfer
     @sender.valid? && @receiver.valid?
   end 
   def execute_transaction
-    binding.pry
+    #binding.pry
       if self.status == "pending" || self.status =="rejected"   
         if self.valid?
         @sender.balance -= amount 
