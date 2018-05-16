@@ -15,7 +15,8 @@ class Transfer
     if valid? 
       @sender.balance - amount 
       @receiver.balance + amount
-    else 
+    else
+      "Transaction rejected. Please check your account balance."
       
   end 
 end
