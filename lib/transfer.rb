@@ -13,18 +13,18 @@ class Transfer
   end 
   def execute_transaction
     counter = 0
-      counter == 0
+      while counter < 1
         if valid? 
         #binding.pry
-        counter += 1
-        @sender.balance -= amount 
-        @receiver.balance += amount
-          self.status = "complete"
+          counter += 1
+          @sender.balance -= amount 
+          @receiver.balance += amount
+            self.status = "complete"
           
         else
           counter += 1
-        self.status = "rejected"
-        "Transaction rejected. Please check your account balance."
+          self.status = "rejected"
+            "Transaction rejected. Please check your account balance."
         end
       else
   end 
